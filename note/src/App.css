@@ -8,7 +8,7 @@ body {
     max-width: 960px;
     margin: 0px auto;
     padding: 0px 15px;
-    min-height: 100vh;
+    min-height: 100px;
   }
   
   .header {
@@ -32,9 +32,14 @@ body {
     grid-gap: 1rem;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
   }
-  
-  
-  @media screen and (max-width: 900px) {
+ 
+.note-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333; 
+    margin-bottom: 10px;
+  }
+   @media screen and (max-width: 900px) {
     .notes {
       grid-template-columns: repeat(2, minmax(300px, 1fr));
     }

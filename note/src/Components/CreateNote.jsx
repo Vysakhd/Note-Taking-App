@@ -1,26 +1,28 @@
-import React from 'react'
+import React from 'react';
 
-
-const CreateNote = ({inputText, setInputText, saveHandler}) => {
-    const char= 100;
-    const charLimit = char - inputText.length;
+const CreateNote = ({ title, setTitle, inputText, setInputText, saveHandler }) => {
   return (
     <div className='note'>
-        <textarea
+      <input
+        type='text'
+        placeholder='Title'
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <textarea
         cols={10}
         rows={5}
         placeholder='Type...'
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}
-        maxLength={100}
-        >
-        </textarea>
-        <div className='note_footer'>
-            <span className='label'>{charLimit} Left</span>
-            <button className='note_save' onClick={saveHandler}>Save</button>
-        </div>
+      ></textarea>
+      <div className='note_footer'>
+        <button className='note_save' onClick={saveHandler}>Save</button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default CreateNote
+export default CreateNote;
+
+
