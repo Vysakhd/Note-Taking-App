@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import CreateNote from './CreateNote';
-import './notes.css';
+import CreateNote from '../components/CreateNote';
+import './notes.css'
 import { v4 as uuid } from 'uuid';
-import Note from './Note';
+import Note from '../components/Note';
 
 const Notes = () => {
   const [title, setTitle] = useState(''); 
