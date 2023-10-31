@@ -3,7 +3,7 @@ import React from 'react';
 const CreateNote = ({ title, setTitle, inputText, setInputText, saveHandler }) => {
   return (
     <div className='note'>
-      <input className='title'
+      <input className='titles'
         type='text'
         placeholder='Title'
         value={title}
